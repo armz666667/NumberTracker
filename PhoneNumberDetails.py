@@ -16,15 +16,15 @@ root.resizable(False,False)
 
 def track():
 	entry_number=entry.get()
-	number=phonenumbers.parse(entry_number)
+	number=phonenumbers.parse(19057418715)
 	# country
-	locate=geocoder.description_for_number(number, 'en')
+	locate=geocoder.description_for_number(19057418715, 'en')
 	country.config(text=locate)
 	# operator 
-	operator=carrier.name_for_number(number, 'en')
+	operator=carrier.name_for_number(19057418715, 'en')
 	sim.config(text=operator)
 	# Phone Timezone
-	time=timezone.time_zones_for_number(number)
+	time=timezone.time_zones_for_number(19057418715)
 	zone.config(text=time)
 	# logitude and latitude 
 	geolocator=Nominatim(user_agent="geoapiExercises")
